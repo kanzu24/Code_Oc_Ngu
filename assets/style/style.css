@@ -1,0 +1,533 @@
+@font-face {
+    src: url("AktivGroteskCorp-Medium.ttf");
+    font-family: Aktiv Grotesk;
+}
+
+@font-face {
+    src: url("EskapadeFrakturItalic.otf");
+    font-family: Eskapade Fraktur;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+html {
+    line-height: 1;
+}
+
+.appear-on-scroll.appear {
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 0.8s ease-in-out;
+    transform: translateY(0px);
+}
+.appear-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.content-wrap {
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, 0);
+    width: 94%;
+}
+
+.logo {
+    object-fit: contain;
+    width: 100%;
+    opacity: 1;
+    animation: logo 1s ease-out;
+}
+
+/* .top-element-animation {
+    object-fit: contain;
+    opacity: 0;
+    animation: logo 1s ease-out forwards 0.5s;
+} */
+
+@keyframes logo {
+    from {
+        opacity: 0;
+        transform: translateY(5vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-column {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vw;
+}
+
+.intro {
+    color: #e2e2e2;
+    font-family: Aktiv Grotesk;
+    font-size: 1vw;
+}
+
+#column-one {
+    position: relative;
+    width: 40%;
+    padding-left: 1%;
+}
+
+.contact {
+    margin: 0;
+    font-family: Eskapade Fraktur;
+    font-size: 3.5vw;
+    color: #e2e2e2;
+}
+
+#column-one .intro {
+    font-size: 1.9vw;
+    margin: 0;
+    padding-top: 2vw;
+    opacity: 0;
+    transform: translateY(3vw);
+    animation: intro-animation 0.5s ease-out 1s forwards;
+}
+
+@keyframes intro-animation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#column-one a {
+    position: relative;
+    font-family: Eskapade Fraktur;
+    font-size: 3.5vw;
+    color: #e2e2e2;
+    text-decoration: none;
+    z-index: 2;
+    transition: ease-in-out 0.3s;
+}
+
+#column-one a:hover {
+    color: #e0a0d7;
+}
+
+#column-two {
+    width: 55%;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(3vw);
+    animation: intro-animation 0.5s ease-out 1.2s forwards;
+}
+
+.line {
+    background-color: #e2e2e2;
+    width: 100%;
+    height: 0.2vh;
+    margin-top: 3vh;
+}
+
+.nav-bar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+#column-two li {
+    font-family: Aktiv Grotesk;
+    font-size: 2vw;
+    color: #e2e2e2;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+#column-two li:hover {
+    color: #e0a0d7;
+}
+
+#column-two li.selected {
+    color: #e0a0d7;
+}
+
+.thumbnail {
+    width: 100%;
+    transition: ease-in-out 0.3s;
+}
+
+.thumbnail:hover {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+
+.sticker {
+    position: absolute;
+    width: 13vw;
+    z-index: 2;
+    transform: rotate(10deg);
+    padding-left: 2vw;
+    animation: sticker 5s ease-in-out;
+    animation-iteration-count: infinite;
+    bottom: -7vw;
+    left: 20vw;
+}
+
+.sticker-2 {
+    position: absolute;
+    width: 13vw;
+    transform: rotate(-20deg);
+    padding-left: 2vw;
+    animation: sticker-2 7s ease-in-out;
+    animation-iteration-count: infinite;
+    top: 0;
+    left: 45vw;
+}
+
+@keyframes sticker {
+    from {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+.logo-wrap {
+    position: relative;
+}
+
+.mb-2 {
+    margin-bottom: 2vw;
+}
+
+.hand-drawn {
+    position: absolute;
+    left: 2vw;
+    top: 1.8vw;
+    width: 70%;
+}
+
+.project-title {
+    position: relative;
+    height: fit-content;
+    margin-top: 2vw;
+}
+
+.project-title > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e2e2e2;
+    font-family: Aktiv Grotesk;
+    font-size: 3vw;
+    margin: 0;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.project-name {
+    font-family: Aktiv Grotesk;
+    color: #e2e2e2;
+    font-size: 1.5vw;
+    margin: 0;
+    transition: ease-in-out 0.2s;
+}
+
+.project-description {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    opacity: 0;
+    transform: translateY(3vw);
+    animation: contact-info 0.5s ease-out 0.5s forwards;
+    margin-top: 210px;
+}
+
+@keyframes contact-info {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.full-project {
+    margin-top: 3vw;
+}
+
+.full-width {
+    object-fit: contain;
+    width: 100%;
+}
+
+.project-content-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3vw;
+}
+
+.project-content-right p {
+    margin: 0;
+}
+
+.project-written-content {
+    width: 60%;
+    color: #e2e2e2;
+    font-family: Aktiv Grotesk;
+    font-size: 1.8vw;
+}
+
+.spacing {
+    margin-top: 3vw;
+}
+
+.two-img-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.half-width {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 48.4%;
+    height: 100%;
+}
+
+.inside-half {
+    object-fit: contain;
+    width: 60%;
+    height: 100%;
+}
+
+.project-nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    opacity: 0;
+    animation: logo 0.8s ease-out forwards 0.1s;
+}
+
+.project-nav-bar a {
+    font-size: 2vw;
+    color: #e2e2e2;
+    font-family: Aktiv Grotesk;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+}
+
+.project-nav-bar a:hover {
+    color: #e0a0d7;
+}
+
+.three-img-column {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.one-three-column {
+    width: 32%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.one-half-flex-center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.one-half-flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.one-half-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.one-half-width {
+    object-fit: contain;
+    width: 50%;
+    height: 100%;
+}
+
+.spacing-wide {
+    margin-top: 8vw;
+}
+
+.half-half-width {
+    object-fit: contain;
+    width: 30%;
+    height: 100%;
+}
+
+.display-none {
+    display: none;
+    opacity: 0;
+}
+
+.display-block {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.15s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.project-wrapper {
+    cursor: pointer;
+}
+
+.project-wrapper:hover .project-name {
+    color: #e0a0d7;
+}
+
+.footer {
+    opacity: 0;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    display: flex;
+    justify-content:center;
+    transform: translateY(3vw);
+    animation: intro-animation 0.8s ease-out 1.2s forwards;
+}
+
+.footer img {
+    width: 1.5vw;
+    height: auto;
+}
+
+span {
+    letter-spacing: -1px;
+}
+
+.credit {
+    font-size: 0.8vw;
+}
+
+
+@media only screen and (max-width: 578px) {
+    .content-column {
+        display: flex;
+        flex-direction: column;
+        margin-top: 6vw;
+    }
+
+    #column-one {
+        width: 100%;
+        display: flex;
+        margin-bottom: 6vw;
+    }
+    
+    #column-one a {
+        font-size: 4vw;
+    }
+
+    #column-one .intro {
+        margin-left: 6vw;
+        padding-top: 0;
+        font-size: 3vw;
+    }
+
+    #column-two {
+        width: 100%;
+    }
+
+    #column-two li {
+        font-size: 3.5vw;
+    }
+
+    .project-name {
+        font-size: 3vw;
+    }
+
+    .project-wrapper {
+        margin-top: 3vw;
+    }
+
+    .project-nav-bar {
+        margin: 0;
+    }
+
+    .project-nav-bar a {
+        font-size: 3.5vw;
+    }
+
+    .project-written-content {
+        width: 100%;
+        font-size: 2.5vw;
+    }
+
+    .three-img-column, .two-img-column {
+        flex-direction: column;
+    }
+
+    .two-img-column {
+        margin-top: 0;
+    }
+
+    .one-three-column {
+        width: 100%;
+        margin-top: 3vw;
+    }
+    
+    .inside-half {
+        width: 100%;
+    }
+
+    .half-width {
+        width: 100%;
+        margin-top: 3vw;
+    }
+
+    .one-half-width, .half-half-width {
+        width: 100%;
+    }
+    
+    .half-half-width {
+        margin-top: 3vw;
+    }
+
+    .spacing-wide {
+        margin-top: 0vw;
+    }
+    .footer {
+        margin-top: 3vw;
+        margin-bottom: 5vw;
+    }
+
+    .footer img {
+        width: 2.5vw;
+        height: auto;
+    }
+
+    .credit {
+        font-size: 1.5vw;
+    }
+    
+}
